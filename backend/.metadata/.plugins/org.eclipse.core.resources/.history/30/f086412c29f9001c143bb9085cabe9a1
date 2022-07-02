@@ -1,0 +1,5 @@
+package com.onlinebookstore.dtos;
+
+public class WishlistDTO {
+
+}

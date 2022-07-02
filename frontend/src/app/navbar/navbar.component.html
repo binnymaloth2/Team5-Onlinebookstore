@@ -1,0 +1,116 @@
+<nav class="navbar navbar-expanding navbar navbar-dark" style="background-color: rgb(123, 198, 31);">
+
+  <button
+    class="navbar-toggler ml-auto hidden-sm-up float-xs-right"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNav"
+    aria-controls="navbarNav"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav" style="margin-left: 93%;" >
+    <ul class="navbar-nav mr-auto" *ngIf="role == 'A'">
+      <li class="nav-item active">
+        <a class="nav-link" [routerLink]="['/']">Home</a>
+      </li>
+     
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/category']">Categories</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/products']">Products</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/orders']">Orders</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/users']">Users</a>
+      </li>
+      <li class="nav-item">
+        <button class="btn-link border-0 nav-link" (click)="logout()">
+          Logout
+        </button>
+      </li>
+    </ul>
+    <ul class="navbar-nav mr-auto" *ngIf="role == 'U'">
+      <li class="nav-item active">
+        <a class="nav-link" [routerLink]="['/']">Home</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Categories
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a
+            *ngFor="let c of cats"
+            class="dropdown-item"
+            href="/?catid={{ c.id }}"
+            >{{ c.catname }}</a
+          >
+        </div>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" [routerLink]="['/profile']">Profile</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" [routerLink]="['/history']">Order History</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" [routerLink]="['/wishlist']">Wishlist </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" [routerLink]="['/viewcart']">View Cart </a>
+      </li>
+      <li class="nav-item active">
+        <button class="nav-link btn-link border-0" (click)="logout()">
+          Logout
+        </button>
+      </li>
+    </ul>
+    <ul class="navbar-nav mr-auto" *ngIf="role == null">
+      <li class="nav-item active">
+        <a class="nav-link" [routerLink]="['/']">Home</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Categories
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a
+            *ngFor="let c of cats"
+            class="dropdown-item"
+            href="/?catid={{ c.id }}"
+            >{{ c.catname }}</a
+          >
+        </div>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" [routerLink]="['/login']">Login</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" [routerLink]="['/register']">Register</a>
+      </li>
+    </ul>
+    
+  </div>
+</nav>
+<div>
+
+</div>

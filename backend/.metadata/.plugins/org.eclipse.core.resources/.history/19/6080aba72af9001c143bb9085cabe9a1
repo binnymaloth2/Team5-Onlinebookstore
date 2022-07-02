@@ -1,0 +1,10 @@
+package com.onlinebookstore.services;
+
+public class AdminService {
+
+	public int count() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

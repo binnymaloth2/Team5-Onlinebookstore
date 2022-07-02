@@ -1,0 +1,48 @@
+<app-header></app-header>
+<div class="container-fluid">
+  <h4>Orders</h4>
+  <div class="row" style="margin-left: 14%;">
+    <div class="col-sm-10" style="BACKGROUND: #84b8d6;border-radius: 21px;">
+      <table class="table table-bordered table-sm">
+        <thead>
+          <tr>
+            <th>Book Order Id</th>
+            <th>Book Customer Name</th>
+            <th>Book Order Date</th>
+            <th>Book Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let p of list">
+            <td>{{ p.orderid }}</td>
+            <td>{{ p.customer.name }}</td>
+            <td>{{ p.orderDate | date }}</td>
+            <td>
+              <table class="table table-sm">
+                <thead>
+                  <tr>
+                    <th>Book Product</th>
+                    <th>Book Price</th>
+                    <th>Book Qty</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let od of p.orderdetails">
+                    <td>
+                      <img
+                        src="http://localhost:8080/{{ od.product.photo }}"
+                        style="width: 60px"
+                      />{{ od.product.pname }}
+                    </td>
+                    <td>{{ od.product.price }}</td>
+                    <td>{{ od.qty }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

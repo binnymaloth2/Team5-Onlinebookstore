@@ -1,0 +1,5 @@
+package com.onlinebookstore.models;
+
+public class Product {
+
+}

@@ -1,0 +1,5 @@
+package com.onlinebookstore.repos;
+
+public class CategoryRepository {
+
+}

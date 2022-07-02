@@ -1,0 +1,5 @@
+package com.onlinebookstore.services;
+
+public class WishlistService {
+
+}

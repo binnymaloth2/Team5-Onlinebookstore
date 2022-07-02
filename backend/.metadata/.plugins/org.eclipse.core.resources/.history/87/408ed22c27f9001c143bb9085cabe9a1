@@ -1,0 +1,5 @@
+package com.onlinebookstore.controller;
+
+public class AdminController {
+
+}

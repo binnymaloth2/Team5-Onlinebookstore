@@ -1,0 +1,5 @@
+package com.onlinebookstore.utils;
+
+public class DiskStorageServiceImpl {
+
+}
